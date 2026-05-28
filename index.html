@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyLens - Weather App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="bg-layer" id="bg-layer"></div>
+    <div class="particles" id="particles"></div>
+
+    <div class="app-wrapper">
+        <div class="app-container">
+
+            <header class="app-header">
+                <h1 class="app-title">🌤 SkyLens</h1>
+                <p class="app-subtitle">Real-time weather, anywhere in the world</p>
+                <button id="theme-toggle" class="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
+            </header>
+
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="city-input" class="search-input" placeholder="Enter city name..."
+                        autocomplete="off" />
+                    <button id="search-btn" class="search-btn">🔍 Search</button>
+                </div>
+
+                <button id="location-btn" class="location-btn">
+                    📍 Use My Location
+                </button>
+            </div>
+
+            <div id="recent-searches" class="recent-searches hidden">
+                <p class="recent-label">Recent:</p>
+                <div id="recent-list" class="recent-list"></div>
+            </div>
+
+            <div id="error-box" class="error-box hidden">
+                <span class="error-icon">⚠️</span>
+                <p id="error-message">Something went wrong.</p>
+            </div>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p class="loading-text">Fetching weather data...</p>
+            </div>
+
+            <div id="weather-card" class="weather-card hidden">
+
+                <div class="weather-header">
+                    <h2 id="city-name">--</h2>
+                    <p id="weather-date">--</p>
+                </div>
+
+                <div class="weather-main">
+                    <div class="icon-container">
+                        <img id="weather-icon" src="" alt="Weather Icon" />
+                        <div class="icon-glow"></div>
+                    </div>
+                    <div class="temp-container">
+                        <div class="temp-row">
+                            <h3 id="temperature">--</h3>
+                            <button id="unit-toggle" class="unit-toggle">°C</button>
+                        </div>
+                        <p id="weather-condition">--</p>
+                    </div>
+                </div>
+
+                <div class="weather-details">
+
+                    <div class="detail-card">
+                        <span class="detail-icon">💧</span>
+                        <span class="detail-label">Humidity</span>
+                        <span id="humidity" class="detail-value">--%</span>
+                    </div>
+
+                    <div class="detail-card">
+                        <span class="detail-icon">💨</span>
+                        <span class="detail-label">Wind Speed</span>
+                        <span id="wind-speed" class="detail-value">-- km/h</span>
+                    </div>
+
+                    <div class="detail-card">
+                        <span class="detail-icon">🌡️</span>
+                        <span class="detail-label">Feels Like</span>
+                        <span id="feels-like" class="detail-value">--</span>
+                    </div>
+
+                </div>
+
+            </div>
+           
+            <div id="forecast-section" class="forecast-section hidden">
+                <h4 class="forecast-title">5-Day Forecast</h4>
+                <div id="forecast-list" class="forecast-list"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
