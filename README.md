@@ -98,33 +98,6 @@ const FORECAST_URL =
 
 ---
 
-# ▶️ How to Run the Project
-
-## Step 1
-
-Download or clone the repository.
-
-```bash
-git clone https://github.com/pranavitholeti/SkyLens.git
-```
-
----
-
-## Step 2
-
-Open the project folder.
-
----
-
-## Step 3
-
-Open `index.html` in your browser.
-
-OR
-
-Use VS Code Live Server extension for better experience.
-
----
 
 # 📱 Responsive Design
 
